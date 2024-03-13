@@ -10,3 +10,13 @@ class Thing(models.Model):
 	
 	def __str__(self):
 		return self.name
+	
+class AccessToken(models.Model):
+    user = "1"
+    token = models.CharField(max_length=255)
+    expiration_time = models.DateTimeField()
+
+    # Additional fields and methods as needed
+
+    def __str__(self):
+        return self.token
